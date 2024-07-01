@@ -2,16 +2,17 @@ package org.example.basic;
 
 import org.springframework.stereotype.Repository;
 
+import java.util.HashMap;
+import java.util.Map;
+
 @Repository
-public class UserRepository implements UserRepositoryInterface {
+public class UserRepository {
 
-    @Override
-    public void save(User user) {
-        System.out.println("User saved");
-    }
+    Map<String, User> users = new HashMap<>();
 
-    @Override
-    public void delete(User user) {
-        System.out.println("User deleted");
+
+    public User getUser() {
+        users.put("max", new User("max@gmail.com", "Max", 20));
+        return users.get("max");
     }
 }

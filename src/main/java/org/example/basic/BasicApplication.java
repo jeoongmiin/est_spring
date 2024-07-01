@@ -1,27 +1,28 @@
 package org.example.basic;
 
-import org.springframework.beans.factory.annotation.Value;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class BasicApplication {
-
-    @Value("${kakao.api.key}")
     public static void main(String[] args) {
-        // UserRepositoryInterface userRepository = new UserRepository();
+//        User model = new User("max@gmail.com", "김승조", 30);
+//        UserView userView = new UserView();
+//        UserController userController = new UserController(model, userView);
+//        userController.updateView();
+//        userController.setUserName("김승조랑말");
+//        userController.setUserAge(31);
+//
+//        userController.updateView();
 
-        Singleton singleton = Singleton.getInstance();
-        Singleton singleton1 = Singleton.getInstance();
-        Singleton singleton2 = Singleton.getInstance();
+//        Quiz quiz = new Quiz("What is the capital of France?", "Paris");
+//        QuizView quizView = new QuizView();
+//        QuizController quizController = new QuizController(quiz, quizView);
+//        quizController.startQuiz();
 
-        System.out.println(singleton);
-        System.out.println("====================================");
-        System.out.println(singleton1);
-        System.out.println("====================================");
-        System.out.println(singleton2);
 
-        SpringApplication.run(BasicApplication.class, args);
+          SpringApplication.run(BasicApplication.class, args);
     }
 
 }
